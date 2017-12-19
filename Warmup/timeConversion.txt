@@ -1,0 +1,26 @@
+#!/bin/python
+
+import sys
+
+def timeConversion(s):
+    a = s.split(":") 
+    HH = a[0]
+    MM = a[1]
+    SS = a[2][0:2]
+    Z = a[2][2:4]
+    if HH == "12" and Z == "PM":
+        result = HH+":"+MM+":"+SS
+    elif HH == "12" and Z == "AM":
+        HH = "00"
+        result = str(HH)+":"+MM+":"+SS
+    elif Z == "PM":
+        HH = int(HH) + 12
+        result = str(HH)+":"+MM+":"+SS
+    else:
+        result = HH+":"+MM+":"+SS
+        
+    return result
+    
+s = raw_input().strip()
+result = timeConversion(s)
+print(result)

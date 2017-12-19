@@ -1,0 +1,14 @@
+#!/bin/python
+
+import sys
+max = 0
+min = 0
+arr = map(int, raw_input().strip().split(' '))
+arr_sorted = sorted(arr)
+for a in range(1, len(arr_sorted)):
+    max = max + arr_sorted[a]
+for a in range(0, (len(arr_sorted)-1)):
+    min = min + arr_sorted[a]
+    
+print min, max
+    

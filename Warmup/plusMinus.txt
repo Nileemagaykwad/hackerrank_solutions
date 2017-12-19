@@ -1,0 +1,23 @@
+#!/bin/python
+
+import sys
+res1 = 0.0
+res2 = 0.0
+res3 = 0.0
+n = int(raw_input().strip())
+arr = map(int,raw_input().strip().split(' '))
+for number in range(n):
+    if arr[number] == 0:
+        res1 += 1
+    elif arr[number] > 0:
+        res2 += 1
+    else:
+        res3 += 1
+        
+
+print format(res2 / n , '.6f')
+print format(res3 / n , '.6f')
+print format(res1 / n , '.6f')
+
+
+

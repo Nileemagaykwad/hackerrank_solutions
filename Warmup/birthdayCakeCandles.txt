@@ -1,0 +1,26 @@
+#!/bin/python
+
+import sys
+
+def birthdayCakeCandles(n, ar):
+    count = 0
+    max=ar[0]
+    for a in range(0,n):
+        if(ar[a]>max):
+            max=ar[a]
+    for a in range(0,n):
+        if(ar[a]==max):
+            count=count+1
+        
+    return count
+    
+    
+    
+    
+        
+         
+
+n = int(raw_input().strip())
+ar = map(int, raw_input().strip().split(' '))
+result = birthdayCakeCandles(n, ar)
+print(result)
